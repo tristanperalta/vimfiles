@@ -28,13 +28,13 @@ Basic Usage:
 
 Plugins:
  * checksyntax_vim => https://github.com/tomtom/checksyntax_vim.git
- * fuzzy-finder => https://github.com/vim-scripts/FuzzyFinder.git
- * snipmate.vim => https://github.com/msanders/snipmate.vim.git
- * minibufexpl.vim => https://github.com/fholgado/minibufexpl.vim.git
- * nerdtree => https://github.com/scrooloose/nerdtree.git
- * supertab => https://github.com/vim-scripts/SuperTab.git
- * vim-colors-solarized => https://github.com/altercation/vim-colors-solarized.git
  * delimitmate => https://github.com/Raimondi/delimitMate.git
+ * fuzzy-finder => https://github.com/vim-scripts/FuzzyFinder.git
+ * minibufexpl.vim => https://github.com/fholgado/minibufexpl.vim.git
  * nerdcommenter => https://github.com/scrooloose/nerdcommenter.git
+ * nerdtree => https://github.com/scrooloose/nerdtree.git
+ * snipmate.vim => https://github.com/msanders/snipmate.vim.git
+ * supertab => https://github.com/vim-scripts/SuperTab.git
  * tagbar => https://github.com/majutsushi/tagbar.git
+ * vim-colors-solarized => https://github.com/altercation/vim-colors-solarized.git
  * vim-fugitive => https://github.com/tpope/vim-fugitive.git
