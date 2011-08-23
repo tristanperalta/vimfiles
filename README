@@ -24,7 +24,7 @@ Basic Usage:
  * to comment multiple lines, select lines 
    (using visual or select from mouse), hit '-' then 'cc'.
  * Hold Ctrl, then 'h' or 'l' to move between buffers
- * Hold Ctrl, then 'd' to delete buffer (close open file).
+ * Hold Ctrl, then 'd' to delete buffer (close file).
 
 Plugins:
  * checksyntax_vim => https://github.com/tomtom/checksyntax_vim.git
