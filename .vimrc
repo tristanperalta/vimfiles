@@ -32,9 +32,6 @@ imap <C-s> <Esc>:w<CR>i
 " automatically remove trailing spaces on save, ignoring leading tabs
 autocmd BufWritePre *.py,*.php,*.rb :%s/\([^\t]\+\)\@<=\s\+$
 
-" html_autoclosetag
-" au FileType xhtml,xml,ctp so $VIMRUNTIME/ftplugin/html_autoclosetag.vim
-
 syntax on
 filetype plugin indent on
 set mouse=a
