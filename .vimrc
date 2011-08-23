@@ -1,3 +1,5 @@
+" this script is based on http://mirnazim.org/writings/vim-plugins-i-use/
+
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
@@ -25,6 +27,9 @@ colorscheme solarized
 " Ctrl-s like windows
 map <C-s> :w<CR>
 imap <C-s> <Esc>:w<CR>i
+
+" automatically remove trailing spaces on save, ignoring leading tabs
+autocmd BufWritePre *.py,*.php,*.rb :%s/\([^\t]\+\)\@<=\s\+$
 
 syntax on
 filetype plugin indent on
