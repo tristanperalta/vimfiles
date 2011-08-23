@@ -5,8 +5,6 @@ call pathogen#helptags()
 
 let mapleader = "-"
 
-" css_color.vim => https://github.com/vim-scripts/css_color.vim
-" better-css-syntax-for-vim => https://github.com/vim-scripts/Better-CSS-Syntax-for-Vim
 " fuzzy finder => https://github.com/vim-scripts/FuzzyFinder
 noremap <Leader>o <Esc>:FufCoverageFile<CR>
 
@@ -33,6 +31,9 @@ imap <C-s> <Esc>:w<CR>i
 
 " automatically remove trailing spaces on save, ignoring leading tabs
 autocmd BufWritePre *.py,*.php,*.rb :%s/\([^\t]\+\)\@<=\s\+$
+
+" html_autoclosetag
+" au FileType xhtml,xml,ctp so $VIMRUNTIME/ftplugin/html_autoclosetag.vim
 
 syntax on
 filetype plugin indent on
