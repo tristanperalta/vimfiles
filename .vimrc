@@ -12,7 +12,10 @@ noremap <Leader>o <Esc>:FufCoverageFile<CR>
 
 " tagbar => https://github.com/majutsushi/tagbar
 let g:tagbar_usearrow = 1
-noremap <Leader>t :TagbarToggle<CR>
+noremap <Leader>g :TagbarToggle<CR>
+
+" nerdtree => https://github.com/scrooloose/nerdtree
+noremap <Leader>t :NERDTreeToggle<CR>
 
 " minibufexpl => https://github.com/fholgado/minibufexpl.vim
 noremap <C-h> :bp<CR>

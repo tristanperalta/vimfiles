@@ -1,5 +1,4 @@
 syntax: glob
 
-bundle/*
 .netrwhist
 *.swp
