@@ -1,3 +1,4 @@
+bundle/ack.vim = [git]https://github.com/mileszs/ack.vim.git
 bundle/checksyntax_vim = [git]https://github.com/tomtom/checksyntax_vim.git
 bundle/delimitmate = [git]https://github.com/Raimondi/delimitMate.git
 bundle/fuzzy-finder = [git]https://github.com/vim-scripts/FuzzyFinder.git
