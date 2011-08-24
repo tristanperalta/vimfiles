@@ -45,6 +45,30 @@ set smartcase
 set listchars=tab:▸\ ,eol:¬
 " }}}
 
+" Folding rules {{{
+set foldenable
+set foldcolumn=2
+set foldmethod=marker
+set foldlevelstart=0
+set foldopen=block,hor,insert,jump,mark,percent,quickfix,search,tag,undo
+function! MyFoldText()
+    let line = getline(v:foldstart)
+
+    let nucolwidth = &fdc + &number * &numberwidth
+    let windowwidth = winwidth(0) - nucolwidth - 3
+    let foldedlinecount = v:foldend - v:foldstart
+
+    " expand tabs into spaces
+    let onetab = strpart(' ', 0, &tabstop)
+    let line = substitute(line, '\t', onetab, 'g')
+
+    let line = strpart(line, 0, windowwidth - 2 -len(foldedlinecount))
+    let fillcharcount = windowwidth - len(line) - len(foldedlinecount) - 4
+    return line . ' …' . repeat(" ",fillcharcount) . foldedlinecount . ' '
+endfunction
+set foldtext=MyFoldText()
+" }}}
+
 " Editor layout {{{
 set laststatus=2
 set number
@@ -101,6 +125,10 @@ inoremap jj <Esc>
 " Jump to matching pairs easily, with Tab
 nnoremap <Tab> %
 vnoremap <Tab> %
+
+"Folding
+nnoremap <Space> za
+vnoremap <Space> za
 " }}}
 
 " FuzzyFinder settings {{{
@@ -125,8 +153,13 @@ set background="dark"
 colorscheme solarized
 " }}}
 
+" Ack settings {{{
+let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+nnoremap <leader>a :Ack
+" }}}
+
 " Filetype specific handling {{{
-if has("autocmd") " {{{
+if has("autocmd")
     augroup invisible_chars " {{{
         au!
         " show invisible characters in all of these files
