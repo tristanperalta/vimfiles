@@ -42,7 +42,7 @@ set shiftwidth=4
 set smarttab
 set smartcase
 
-set listchars=tab:▸\ ,eol:¬
+set listchars=tab:▸\ ,eol:¬,trail:·,extends:#,nbsp:·
 " }}}
 
 " Folding rules {{{
@@ -147,12 +147,6 @@ let NERDTreeHighlightCursor=1
 noremap <leader>t :NERDTreeToggle<CR>
 " }}}
 
-" Solarized settings {{{
-let g:solarized_menu=0
-set background="dark"
-colorscheme solarized
-" }}}
-
 " Ack settings {{{
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 nnoremap <leader>a :Ack
@@ -192,3 +186,15 @@ if has("autocmd")
 
 endif
 " }}}
+
+" Extra {{{
+if has("gui_running")
+	let g:solarized_menu=0
+	let g:solarized_termcolors=256
+	let g:solorized_bold=1
+	let g:solarized_underline=1
+	let g:solarized_italic=1
+	set background="dark"
+	colorscheme solarized
+endif
+"}}}
