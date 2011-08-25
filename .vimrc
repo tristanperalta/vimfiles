@@ -134,8 +134,8 @@ vnoremap <Space> za
 " }}}
 
 " DelimitMate settings {{{
-let dilimitMate_balance_matchpairs = 1
-let dilimitMate_expand_space = 1
+let delimitMate_balance_matchpairs = 1
+let delimitMate_expand_space = 1
 let delimitMate_excluded_regions = "Comments"
 " }}}
 
