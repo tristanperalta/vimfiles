@@ -41,6 +41,7 @@ set softtabstop=4
 set shiftwidth=4
 set smarttab
 set smartcase
+set noexpandtab
 
 set listchars=tab:▸\ ,eol:¬,trail:·,extends:#,nbsp:·
 " }}}
@@ -132,6 +133,12 @@ nnoremap <Space> za
 vnoremap <Space> za
 " }}}
 
+" DelimitMate settings {{{
+let dilimitMate_balance_matchpairs = 1
+let dilimitMate_expand_space = 1
+let delimitMate_excluded_regions = "Comments"
+" }}}
+
 " FuzzyFinder settings {{{
 noremap <leader>o <Esc>:FufCoverageFile<CR>
 " }}}
@@ -150,7 +157,7 @@ noremap <leader>t :NERDTreeToggle<CR>
 
 " Ack settings {{{
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
-nnoremap <leader>a :Ack
+nnoremap <leader>a :Ack 
 " }}}
 
 " Filetype specific handling {{{
@@ -171,19 +178,22 @@ if has("autocmd")
         " general help can still be entered manually with :h
         autocmd filetype vim noremap <buffer> <F1> <Esc>:help <C-r><C-w><CR>
         autocmd filetype vim noremap! <buffer> <F1> <Esc>:help <C-r><C-w><CR>
+
+        " Reload settings when changed
+        autocmd bufwritepost .vimrc source $MYVIMRC
     augroup end " }}}
 
     augroup ruby_files " {{{
         au!
         " autoindent with two spaces, always expand tabs
-        autocmd FileType ruby,eruby,yaml set sw=2 sts=2 et
+        autocmd filetype ruby,eruby,yaml set sw=2 sts=2 et
     augroup end " }}}
 
     augroup php_files " {{{
         au!
-        autocmd FileType ctp set filetype=php.html
+        autocmd filetype ctp set filetype=php.html noet
         " automatically remove trailing spaces on save, ignoring leading tabs
-        autocmd BufWritePre *.php :%s/\([^\t]\+\)\@<=\s\+$
+        autocmd bufwritepre *.php,*.ctp :%s/\([^\t]\+\)\@<=\s\+$
     augroup end " }}}
 
 endif
