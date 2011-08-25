@@ -18,6 +18,7 @@ set smarttab
 set autoindent
 set copyindent
 set mouse=a
+set nowrap
 
 " searching and moving
 
@@ -37,7 +38,6 @@ nnoremap <leader><space> :nohl<CR>
 " tab settings
 set tabstop=4
 set softtabstop=4
-set expandtab
 set shiftwidth=4
 set smarttab
 set smartcase
@@ -180,6 +180,7 @@ if has("autocmd")
 
     augroup php_files " {{{
         au!
+        autocmd FileType ctp set filetype=php.html
         " automatically remove trailing spaces on save, ignoring leading tabs
         autocmd BufWritePre *.php :%s/\([^\t]\+\)\@<=\s\+$
     augroup end " }}}
