@@ -12,7 +12,7 @@ Features:
 
 Installation:
  1. In your home directory, type
-    $ hg clone ssh://hg@bitbucket.org/tristan_ph/dotvim
+    $ hg clone https://tristan_ph@bitbucket.org/tristan_ph/dotvim
  2. Create symlinks
     $ ln -s ~/dotvim/.vimrc .vimrc 
     $ ln -s ~/dotvim/ .vim

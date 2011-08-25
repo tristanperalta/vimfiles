@@ -97,6 +97,7 @@ set showcmd
 
 " Shortcut mappings {{{
 nnoremap ; :
+nnoremap ! :!
 
 " Sudo to write
 cmap w!! w !sudo tee % >/dev/null
