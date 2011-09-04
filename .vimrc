@@ -103,9 +103,9 @@ nnoremap ! :!
 " Sudo to write
 cmap w!! w !sudo tee % >/dev/null
 
-noremap <C-h> :bp<CR>
-noremap <C-l> :bn<CR>
-noremap <C-d> :bd<CR>
+noremap <C-S-Tab> :bp<CR>
+noremap <C-Tab> :bn<CR>
+noremap <C-d> :Bclose<CR>
 
 " Ctrl-s like windows
 map <C-s> :w<CR>
@@ -131,6 +131,8 @@ vnoremap <Tab> %
 "Folding
 nnoremap <Space> za
 vnoremap <Space> za
+
+cnoremap <expr> bd (getcmdtype() == ':' ? 'Bclose' : 'bd')
 " }}}
 
 " DelimitMate settings {{{

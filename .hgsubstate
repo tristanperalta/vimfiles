@@ -1,4 +1,5 @@
 a41d5d52c39a31128e969e69acf800b198cb07f9 bundle/ack.vim
+ee25899ab344f24655b6f37bdc4ce52ffc3cb27e bundle/bclose
 c095466659f2ac55af2b3a2031d658e1f3aaeec3 bundle/checksyntax_vim
 39b8298390a9171c796df077ad3c5f3c0f111c56 bundle/delimitmate
 b9f165970346df55862853dd83c8a4f2b2b70262 bundle/fuzzy-finder
@@ -10,3 +11,4 @@ f5a75d075d3c005ebe69e3f5e56cf99516e8aa3b bundle/snipmate.vim
 528a59f26d12278698bb946f8fb82a63711eec21 bundle/vim-colors-solarized
 5f5c8da61fd817ba8dc091350b51c1ab7ca53c8d bundle/vim-fugitive
 94f158e30d2ed6cbaf628c372ced8ec29227c800 bundle/vim-l9
+7cc873769d891f567e8529618d482663a6db9ea2 bundle/vim-rails
