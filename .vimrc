@@ -195,7 +195,7 @@ if has("autocmd")
 
     augroup php_files " {{{
         au!
-        autocmd filetype ctp set filetype=php.html noet
+        autocmd filetype ctp set filetype=php.html set noet
         " automatically remove trailing spaces on save, ignoring leading tabs
         autocmd bufwritepre *.php,*.ctp :%s/\([^\t]\+\)\@<=\s\+$
     augroup end " }}}
