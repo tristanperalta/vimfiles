@@ -8,6 +8,7 @@ ecaa47fd54e5dc770424ae6805d10b182210041c bundle/html5.vim
 b28e7be63235982501ab7dd30c03ea7feef7b095 bundle/nerdcommenter
 12f692f4369526f408e724fa74a0da527ebe2f2f bundle/nerdtree
  bundle/ragtag
+f5a75d075d3c005ebe69e3f5e56cf99516e8aa3b bundle/snipmate.vim
 3c075654d424c6e3c20521bd4567b517a2410593 bundle/tagbar
 dc1692561461fd0b7642e05b03b7670974112eee bundle/vim-coffee-script
 528a59f26d12278698bb946f8fb82a63711eec21 bundle/vim-colors-solarized

@@ -8,6 +8,7 @@ bundle/minibufexpl.vim = [git]https://github.com/fholgado/minibufexpl.vim.git
 bundle/nerdcommenter = [git]https://github.com/scrooloose/nerdcommenter.git
 bundle/nerdtree = [git]https://github.com/scrooloose/nerdtree.git
 bundle/ragtag = [git]https://github.com/tpope/vim-ragtag.git
+bundle/snipmate.vim = [git]https://github.com/msanders/snipmate.vim.git
 bundle/tagbar = [git]https://github.com/majutsushi/tagbar.git
 bundle/vim-coffee-script = [git]https://github.com/kchmck/vim-coffee-script.git
 bundle/vim-colors-solarized = [git]https://github.com/altercation/vim-colors-solarized.git
