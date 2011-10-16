@@ -159,8 +159,8 @@ let NERDTreeHighlightCursor=1
 noremap <leader>t :NERDTreeToggle<CR>
 " }}}
 
-"Fugitive settings {{{
-autocmd BuffReadPost fugitive://* set bufhidden=delete
+" Fugitive settings {{{
+autocmd BufReadPost fugitive://* set bufhidden=delete
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 "}}}
 
@@ -197,7 +197,7 @@ if has("autocmd")
         " autoindent with two spaces, always expand tabs
         autocmd filetype ruby,eruby,yaml set sw=2 sts=2 et
         " automatically remove trailing spaces on save, ignoring leading tabs
-        autocmd bufwritepre *.rb,*.erb,*.yml :%s/\([^\t]\+\)\@<=\s\+$
+        autocmd bufwritepre *.rb,*.erb,*.yml :%s/\s\+$//e
     augroup end " }}}
 
     augroup php_files " {{{
