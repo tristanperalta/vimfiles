@@ -1,10 +1,8 @@
 bundle/ack.vim = [git]https://github.com/mileszs/ack.vim.git
-bundle/bclose = https://tristan_ph@bitbucket.org/tristan_ph/bclose
 bundle/checksyntax_vim = [git]https://github.com/tomtom/checksyntax_vim.git
 bundle/delimitmate = [git]https://github.com/Raimondi/delimitMate.git
 bundle/fuzzy-finder = [git]https://github.com/vim-scripts/FuzzyFinder.git
 bundle/html5.vim = [git]https://github.com/othree/html5.vim.git
-bundle/minibufexpl.vim = [git]https://github.com/fholgado/minibufexpl.vim.git
 bundle/nerdcommenter = [git]https://github.com/scrooloose/nerdcommenter.git
 bundle/nerdtree = [git]https://github.com/scrooloose/nerdtree.git
 bundle/ragtag = [git]https://github.com/tpope/vim-ragtag.git

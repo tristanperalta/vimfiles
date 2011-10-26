@@ -107,7 +107,7 @@ noremap <C-S-Tab> :bp<CR>
 noremap <C-Tab> :bn<CR>
 noremap <C-h> :bp<CR>
 noremap <C-l> :bn<CR>
-noremap <C-d> :Bclose<CR>
+noremap <C-d> :bd<CR>
 
 " Ctrl-s like windows
 map <C-s> :w<CR>
@@ -133,8 +133,6 @@ vnoremap <Tab> %
 "Folding
 nnoremap <Space> za
 vnoremap <Space> za
-
-cnoremap <expr> bd (getcmdtype() == ':' ? 'Bclose' : 'bd')
 " }}}
 
 " DelimitMate settings {{{
@@ -145,6 +143,7 @@ let delimitMate_excluded_regions = "Comments"
 
 " FuzzyFinder settings {{{
 noremap <leader>o <Esc>:FufCoverageFile<CR>
+noremap <leader>b <Esc>:FufBuffer<CR>
 " }}}
 
 " TagBar settings {{{
