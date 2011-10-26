@@ -218,5 +218,8 @@ if has("gui_running")
 	let g:solarized_italic=1
 	set background="dark"
 	colorscheme solarized
+
+	set guioptions-=m
+	set guioptions-=T
 endif
 "}}}
