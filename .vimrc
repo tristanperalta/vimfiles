@@ -73,6 +73,8 @@ set foldtext=MyFoldText()
 " Editor layout {{{
 set laststatus=2
 set number
+set lines=40
+set columns=120
 " }}}
 
 " Vim behavior {{{
