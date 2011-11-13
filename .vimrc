@@ -136,6 +136,8 @@ vnoremap <Tab> %
 "Folding
 nnoremap <Space> za
 vnoremap <Space> za
+
+noremap <C-d> :bw<CR>
 " }}}
 
 " DelimitMate settings {{{
@@ -168,11 +170,12 @@ set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 " Ack settings {{{
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
-nnoremap <leader>a :Ack 
+nnoremap <leader>a :Ack
 " }}}
 
 " Filetype specific handling {{{
 if has("autocmd")
+    autocmd BufWritePre * :%s/\s\+$//e
     augroup invisible_chars " {{{
         au!
         " show invisible characters in all of these files
@@ -194,19 +197,22 @@ if has("autocmd")
         autocmd bufwritepost .vimrc source $MYVIMRC
     augroup end " }}}
 
+    augroup bash_files " {{{
+        au!
+        autocmd filetype bash set sw=1 sts=2 et
+
+    augroup end " }}}
+
     augroup ruby_files " {{{
         au!
         " autoindent with two spaces, always expand tabs
         autocmd filetype ruby,eruby,yaml set sw=2 sts=2 et
-        " automatically remove trailing spaces on save, ignoring leading tabs
-        autocmd bufwritepre *.rb,*.erb,*.yml :%s/\s\+$//e
+        autocmd BufReadPre Guardfile set ft=ruby
     augroup end " }}}
 
     augroup php_files " {{{
         au!
         autocmd filetype ctp set filetype=php.html set noet
-        " automatically remove trailing spaces on save, ignoring leading tabs
-        autocmd bufwritepre *.php,*.ctp :%s/\([^\t]\+\)\@<=\s\+$
     augroup end " }}}
 
 endif
@@ -214,19 +220,19 @@ endif
 
 " Extra {{{
 if has("gui_running")
-	let g:solarized_menu=0
-	let g:solarized_termcolors=256
-	let g:solorized_bold=1
-	let g:solarized_underline=1
-	let g:solarized_italic=1
-	set background="dark"
-	colorscheme solarized
+    let g:solarized_menu=0
+    let g:solarized_termcolors=256
+    let g:solorized_bold=1
+    let g:solarized_underline=1
+    let g:solarized_italic=1
+    set background="dark"
+    colorscheme solarized
 
-	set guioptions-=m
-	set guioptions-=T
-	set guioptions-=r
-	set guioptions-=R
-	set guioptions-=l
-	set guioptions-=L
+    set guioptions-=m
+    set guioptions-=T
+    set guioptions-=r
+    set guioptions-=R
+    set guioptions-=l
+    set guioptions-=L
 endif
 "}}}
