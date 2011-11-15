@@ -8,7 +8,7 @@ b28e7be63235982501ab7dd30c03ea7feef7b095 bundle/nerdcommenter
  bundle/ragtag
 f5a75d075d3c005ebe69e3f5e56cf99516e8aa3b bundle/snipmate.vim
 3c075654d424c6e3c20521bd4567b517a2410593 bundle/tagbar
-dc1692561461fd0b7642e05b03b7670974112eee bundle/vim-coffee-script
+2519a91c28abebfa35c9bf498343a05ce99de7a4 bundle/vim-coffee-script
 528a59f26d12278698bb946f8fb82a63711eec21 bundle/vim-colors-solarized
 2ef3e5a4876a4cd5ea83a0dcbf17f5c3edbf9de3 bundle/vim-cucumber
 c212714cba92331f45c2c7d7a08ab1c12c873ee1 bundle/vim-fugitive

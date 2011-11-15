@@ -175,10 +175,11 @@ nnoremap <leader>a :Ack
 
 " Filetype specific handling {{{
 if has("autocmd")
-    autocmd BufWritePre * :%s/\s\+$//e
     augroup invisible_chars " {{{
         au!
         " show invisible characters in all of these files
+        autocmd BufWritePre * :%s/\s\+$//e
+        autocmd filetype vim set expandtab
         autocmd filetype vim setlocal list
         autocmd filetype python,rst setlocal list
         autocmd filetype ruby setlocal list
@@ -194,25 +195,36 @@ if has("autocmd")
         autocmd filetype vim noremap! <buffer> <F1> <Esc>:help <C-r><C-w><CR>
 
         " Reload settings when changed
-        autocmd bufwritepost .vimrc source $MYVIMRC
+        autocmd BufWritePost .vimrc source $MYVIMRC
     augroup end " }}}
 
     augroup bash_files " {{{
         au!
-        autocmd filetype bash set sw=1 sts=2 et
+        autocmd filetype bash set shiftwidth=1 softtabstop=2 expandtab
 
     augroup end " }}}
 
     augroup ruby_files " {{{
         au!
         " autoindent with two spaces, always expand tabs
-        autocmd filetype ruby,eruby,yaml set sw=2 sts=2 et
+        autocmd filetype ruby,eruby,yaml set shiftwidth=2 softtabstop=2 expandtab
         autocmd BufReadPre Guardfile set ft=ruby
     augroup end " }}}
 
     augroup php_files " {{{
         au!
         autocmd filetype ctp set filetype=php.html set noet
+    augroup end " }}}
+
+    augroup coffeescript_files " {{{
+        au!
+        autocmd BufNewFile,BufReadPre *.coffee noremap <f9> :CoffeeRun<CR>
+    augroup end " }}}
+
+    augroup javascript_files " {{{
+        au!
+        autocmd filetype ruby,eruby,yaml set shiftwidth=2 softtabstop=2 expandtab
+        autocmd BufNewFile,BufReadPre *.js set
     augroup end " }}}
 
 endif
