@@ -137,6 +137,9 @@ vnoremap <Tab> %
 nnoremap <Space> za
 vnoremap <Space> za
 
+map <F4> :FufRenewCache<CR>
+imap <F4> <Esc>:FufRenewCache<CR>i
+
 noremap <C-d> :bw<CR>
 " }}}
 
@@ -223,8 +226,7 @@ if has("autocmd")
 
     augroup javascript_files " {{{
         au!
-        autocmd filetype ruby,eruby,yaml set shiftwidth=2 softtabstop=2 expandtab
-        autocmd BufNewFile,BufReadPre *.js set
+        autocmd BufNewFile,BufReadPre *.js set shiftwidth=2 softtabstop=2 expandtab
     augroup end " }}}
 
 endif
@@ -232,6 +234,7 @@ endif
 
 " Extra {{{
 if has("gui_running")
+    set guifont=Mono\ 9
     let g:solarized_menu=0
     let g:solarized_termcolors=256
     let g:solorized_bold=1
