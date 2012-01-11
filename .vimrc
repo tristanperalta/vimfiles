@@ -141,6 +141,9 @@ map <F4> :FufRenewCache<CR>
 imap <F4> <Esc>:FufRenewCache<CR>i
 
 noremap <C-d> :bw<CR>
+
+" Insert new line without entering instert mode
+map <S-Enter> o<Esc>k
 " }}}
 
 " DelimitMate settings {{{
@@ -234,7 +237,7 @@ endif
 
 " Extra {{{
 if has("gui_running")
-    set guifont=Mono\ 9
+    set guifont=UbuntuMono\ 10
     let g:solarized_menu=0
     let g:solarized_termcolors=256
     let g:solorized_bold=1
