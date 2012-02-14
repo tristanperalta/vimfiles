@@ -10,6 +10,7 @@ bundle/tagbar = [git]https://github.com/majutsushi/tagbar.git
 bundle/vim-coffee-script = [git]https://github.com/kchmck/vim-coffee-script.git
 bundle/vim-colors-solarized = [git]https://github.com/altercation/vim-colors-solarized.git
 bundle/vim-cucumber = [git]https://github.com/tpope/vim-cucumber.git
+bundle/vim-easymotion = [git]https://github.com/Lokaltog/vim-easymotion.git
 bundle/vim-endwise = [git]https://github.com/tpope/vim-endwise.git
 bundle/vim-fugitive = [git]https://github.com/tpope/vim-fugitive.git
 bundle/vim-jquery = [git]https://github.com/itspriddle/vim-jquery.git
