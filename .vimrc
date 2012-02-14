@@ -172,6 +172,15 @@ noremap <leader>t :NERDTreeToggle<CR>
 " Fugitive settings {{{
 autocmd BufReadPost fugitive://* set bufhidden=delete
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+
+nmap <leader>gs :Gstatus<CR>
+nmap <leader>gb :Gblame<CR>
+nmap <leader>gd :Gdiff<CR>
+nmap <leader>gc :Gcommit<CR>
+nmap <leader>gl :Glog<CR>
+nmap <leader>gc :Gcommit<CR>
+nmap <leader>gp :Git push<CR>
+
 "}}}
 
 " Ack settings {{{
