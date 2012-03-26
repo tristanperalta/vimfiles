@@ -41,7 +41,7 @@ set softtabstop=2
 set shiftwidth=2
 set smarttab
 set smartcase
-set noexpandtab
+set expandtab
 
 set listchars=tab:▸\ ,eol:¬,trail:·,extends:#,nbsp:·
 " }}}
@@ -228,7 +228,7 @@ if has("autocmd")
 
     augroup php_files " {{{
         au!
-        autocmd filetype ctp set filetype=php.html set noet
+        autocmd filetype ctp set filetype=php.html set expandtab
     augroup end " }}}
 
     augroup coffeescript_files " {{{
