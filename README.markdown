@@ -1,5 +1,5 @@
-dotvim
-======
+vimfiles
+========
 
 Set of plugins and vim configuration. Uses pathogen to organize plugins.
 
@@ -14,10 +14,14 @@ Features
 Installation
 ------------
  1. In your home directory, type
+
     $ git clone git@bitbucket.org:tristan_ph/vimfiles.git
+
  2. Create symlinks
+
     $ ln -s ~/vimfiles/.vimrc .vimrc
     $ ln -s ~/vimfiles/ .vim
+
  3. For the Ctrl-s to work properly, add this to your .bashrc file
     stty stop ''
 
