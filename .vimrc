@@ -245,20 +245,20 @@ endif
 
 " Extra {{{
 if has("gui_running")
-    set guifont=UbuntuMono\ 10
-    let g:solarized_menu=0
-    let g:solarized_termcolors=256
-    let g:solorized_bold=1
-    let g:solarized_underline=1
-    let g:solarized_italic=1
-    set background="dark"
-    colorscheme solarized
+  set guifont=UbuntuMono\ 10
+  let g:solarized_menu=0
+  let g:solarized_termcolors=256
+  let g:solorized_bold=1
+  let g:solarized_underline=1
+  let g:solarized_italic=1
+  set background="dark"
+  colorscheme solarized
 
-    set guioptions-=m
-    set guioptions-=T
-    set guioptions-=r
-    set guioptions-=R
-    set guioptions-=l
-    set guioptions-=L
+  set guioptions-=m
+  set guioptions-=T
+  set guioptions-=r
+  set guioptions-=R
+  set guioptions-=l
+  set guioptions-=L
 endif
 "}}}

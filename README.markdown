@@ -3,31 +3,35 @@ dotvim
 
 Set of plugins and vim configuration. Uses pathogen to organize plugins.
 
-Features:
+Features
+---------
  * Tree view
  * Tag view
  * Binds Ctrl-s for saving (like windows). http://sigttou.com/vim-ctrl-s
  * Auto check syntax
  * Search text pattern on each source file from (current working) directory recursively
 
-Installation:
+Installation
+------------
  1. In your home directory, type
-    $ hg clone https://tristan_ph@bitbucket.org/tristan_ph/dotvim
+    $ git clone git@bitbucket.org:tristan_ph/vimfiles.git
  2. Create symlinks
-    $ ln -s ~/dotvim/.vimrc .vimrc 
-    $ ln -s ~/dotvim/ .vim
+    $ ln -s ~/vimfiles/.vimrc .vimrc
+    $ ln -s ~/vimfiles/ .vim
  3. For the Ctrl-s to work properly, add this to your .bashrc file
     stty stop ''
 
-Basic Usage:
+Basic Usage
+-----------
  * to open fuzzy matching, hit '-' then 'o'.
  * to open tree view, hit '-' then 't'.
- * to comment multiple lines, select lines 
+ * to comment multiple lines, select lines
    (using visual or select from mouse), hit '-' then 'cc'.
  * Hold Ctrl, then 'h' or 'l' to move between buffers
  * Hold Ctrl, then 'd' to delete buffer (close file).
 
-Plugins:
+Bundled Plugins
+---------------
  * ack.vim => https://github.com/mileszs/ack.vim
  * checksyntax_vim => https://github.com/tomtom/checksyntax_vim.git
  * delimitmate => https://github.com/Raimondi/delimitMate.git
