@@ -7,7 +7,7 @@ Features
 ---------
  * Tree view
  * Tag view
- * Binds Ctrl-s for saving (like windows). http://sigttou.com/vim-ctrl-s
+ * [Binds <C-s> for saving](http://sigttou.com/vim-ctrl-s) (like windows).
  * Auto check syntax
  * Search text pattern on each source file from (current working) directory recursively
 
