@@ -245,7 +245,7 @@ endif
 
 " Extra {{{
 if has("gui_running")
-  set guifont=UbuntuMono\ 10
+  set guifont=UbuntuMono\ 12
   let g:solarized_menu=0
   let g:solarized_termcolors=256
   let g:solorized_bold=1
