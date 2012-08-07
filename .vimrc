@@ -126,10 +126,6 @@ nmap <leader>Y "+yy
 nmap <leader>p "+p
 nmap <leader>P "+P
 
-" Quickly get out of insert mode
-inoremap jj <Esc>
-inoremap jk <Esc>
-
 " Jump to matching pairs easily, with Tab
 nnoremap <Tab> %
 vnoremap <Tab> %
