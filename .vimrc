@@ -239,6 +239,11 @@ if has("autocmd")
         autocmd BufNewFile,BufReadPre *.js set shiftwidth=2 softtabstop=2 expandtab
     augroup end " }}}
 
+    augroup markdown_files " {{{
+        au!
+        autocmd BufNewFile,BufReadPre *.md set wrap
+    augroup end " }}}
+
 endif
 " }}}
 
