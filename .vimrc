@@ -98,9 +98,9 @@ set showmode
 set showcmd
 
 " }}}
-cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
 " Shortcut mappings {{{
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
 nnoremap ; :
 nnoremap ! :!
 
