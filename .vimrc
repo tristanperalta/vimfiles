@@ -135,8 +135,8 @@ vnoremap <Tab> %
 nnoremap <Space> za
 vnoremap <Space> za
 
-map <F4> :FufRenewCache<CR>
-imap <F4> <Esc>:FufRenewCache<CR>i
+map <F4> :CommandTFlush<CR>
+imap <F4> <Esc>:CommandTFlush<CR>i
 
 noremap <C-d> :bw<CR>
 
@@ -150,9 +150,9 @@ let delimitMate_expand_space = 1
 let delimitMate_excluded_regions = "Comments"
 " }}}
 
-" FuzzyFinder settings {{{
-noremap <leader>o <Esc>:FufCoverageFile<CR>
-noremap <leader>b <Esc>:FufBuffer<CR>
+" Command-T settings {{{
+noremap <leader>o <Esc>:CommandT<CR>
+noremap <leader>b <Esc>:CommandTBuffer<CR>
 " }}}
 
 " TagBar settings {{{

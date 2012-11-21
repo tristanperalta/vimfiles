@@ -38,7 +38,7 @@ Bundled Plugins
 ---------------
  * [ack.vim](https://github.com/mileszs/ack.vim) - type <leader> - A to initiate search
  * [delimitmate](https://github.com/Raimondi/delimitMate.git) - autocompletion of quotes, parenthesis, brackets etc.
- * [fuzzy-finder](https://github.com/vim-scripts/FuzzyFinder.git) - implements TextMate cmd-T functionality
+ * [command-t](https://github.com/wincent/Command-T.git) - implements TextMate cmd-T functionality
  * [html5.vim](https://github.com/othree/html5.vim.git) - syntax for HTML 5
  * [minibufexpl.vim](https://github.com/fholgado/minibufexpl.vim.git) - buffer explorer
  * [nerdcommenter](https://github.com/scrooloose/nerdcommenter.git) - for easy commenting
