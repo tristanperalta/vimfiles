@@ -150,9 +150,9 @@ let delimitMate_expand_space = 1
 let delimitMate_excluded_regions = "Comments"
 " }}}
 
-" Command-T settings {{{
-noremap <leader>o <Esc>:CommandT<CR>
-noremap <leader>b <Esc>:CommandTBuffer<CR>
+" CtrlP settings {{{
+noremap <leader>o <Esc>:CtrlP<CR>
+noremap <leader>b <Esc>:CtrlPBuffer<CR>
 " }}}
 
 " TagBar settings {{{
