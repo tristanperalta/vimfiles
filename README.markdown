@@ -22,8 +22,13 @@ Installation
         $ ln -s ~/vimfiles/.vimrc .vimrc
         $ ln -s ~/vimfiles/ .vim
 
- 3. For the Ctrl-s to work properly, add this to your .bashrc file
-    stty stop ''
+ 3. Initialize submodule
+
+        $ git submodule update --init
+
+ 4. For the Ctrl-s to work properly, add this to your .bashrc file
+
+        stty stop ''
 
 Basic Usage
 -----------
@@ -38,7 +43,7 @@ Bundled Plugins
 ---------------
  * [ack.vim](https://github.com/mileszs/ack.vim) - type <leader> - A to initiate search
  * [delimitmate](https://github.com/Raimondi/delimitMate.git) - autocompletion of quotes, parenthesis, brackets etc.
- * [command-t](https://github.com/wincent/Command-T.git) - implements TextMate cmd-T functionality
+ * [CtrlP](https://github.com/kien/ctrlp.vim) - implements TextMate cmd-T functionality
  * [html5.vim](https://github.com/othree/html5.vim.git) - syntax for HTML 5
  * [minibufexpl.vim](https://github.com/fholgado/minibufexpl.vim.git) - buffer explorer
  * [nerdcommenter](https://github.com/scrooloose/nerdcommenter.git) - for easy commenting
