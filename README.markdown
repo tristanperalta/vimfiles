@@ -8,7 +8,6 @@ Features
  * Tree view
  * Tag view
  * [Binds <C-s> for saving](http://sigttou.com/vim-ctrl-s) (like windows).
- * Auto check syntax
  * Search text pattern on each source file from (current working) directory recursively
 
 Installation
@@ -32,12 +31,12 @@ Installation
 
 Basic Usage
 -----------
- * to open fuzzy matching, hit '-' then 'o'.
- * to open tree view, hit '-' then 't'.
+ * to open fuzzy matching, <Leader>o
+ * to open tree view, hit <Leader>t
  * to comment multiple lines, select lines
-   (using visual or select from mouse), hit '-' then 'cc'.
- * Hold Ctrl, then 'h' or 'l' to move between buffers
- * Hold Ctrl, then 'd' to delete buffer (close file).
+   (using visual or select from mouse), <Leader>cc
+ * Hold <C-h> or <C-l> to move between buffers
+ * Hold <C-d> to delete current buffer (close file).
 
 Bundled Plugins
 ---------------
@@ -49,7 +48,6 @@ Bundled Plugins
  * [nerdcommenter](https://github.com/scrooloose/nerdcommenter.git) - for easy commenting
  * [nerdtree](https://github.com/scrooloose/nerdtree.git) - file tree explorer
  * [snipmate.vim](https://github.com/msanders/snipmate.vim.git) - implements TextMate snippets feature
- * [tagbar](https://github.com/majutsushi/tagbar.git) - tag browser
  * [vim-colors-solarized](https://github.com/altercation/vim-colors-solarized.git)
  * [vim-easymotion](https://github.com/Lokaltog/vim-easymotion.git) - Simple way to use motions
  * [vim-jquery](https://github.com/itspriddle/vim-jquery.git) - jQuery syntax
