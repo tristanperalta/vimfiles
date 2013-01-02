@@ -1,5 +1,6 @@
 " Use vim settings, rather than vi settings
 set nocompatible
+set encoding=utf-8
 
 " Use pathogen to easily modify the runtime path to include all plugins under
 " the ~/.vim/bundle directory
@@ -166,7 +167,6 @@ noremap <leader>t :NERDTreeToggle<CR>
 
 " Fugitive settings {{{
 autocmd BufReadPost fugitive://* set bufhidden=delete
-set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 nmap <leader>gs :Gstatus<CR>
 nmap <leader>gb :Gblame<CR>
