@@ -135,9 +135,6 @@ vnoremap <Tab> %
 nnoremap <Space> za
 vnoremap <Space> za
 
-map <F4> :CommandTFlush<CR>
-imap <F4> <Esc>:CommandTFlush<CR>i
-
 noremap <C-d> :bw<CR>
 
 " Insert new line without entering instert mode
@@ -153,11 +150,11 @@ let delimitMate_excluded_regions = "Comments"
 " CtrlP settings {{{
 noremap <leader>o <Esc>:CtrlP<CR>
 noremap <leader>b <Esc>:CtrlPBuffer<CR>
-" }}}
 
-" TagBar settings {{{
-let g:tagbar_usearrow = 1
-noremap <leader>g :TagbarToggle<CR>
+map <F4> :CtrlPClearCache<CR>
+imap <F4> <Esc>:CtrlPClearCache<CR>i
+
+:helptags $HOME/.vim/bundle/ctrlp.vim/doc
 " }}}
 
 " NERDTree settings {{{
