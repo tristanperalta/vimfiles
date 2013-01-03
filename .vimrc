@@ -146,6 +146,9 @@ map <S-Enter> o<Esc>k
 " Ctags shortcuts
 map <C-\> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
+" Reindent file
+map <Leader>i mmgg=G`m<CR>
+
 " }}}
 
 " DelimitMate settings {{{
