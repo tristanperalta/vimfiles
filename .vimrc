@@ -72,7 +72,6 @@ set foldtext=MyFoldText()
 
 " Editor layout {{{
 "
-set t_Co=256
 set laststatus=2
 set number
 if ("gui_running")
@@ -172,6 +171,7 @@ let NERDTreeShowFiles=1
 let NERDTreeShowHidden=1
 let NERDTreeHighlightCursor=1
 noremap <leader>t :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 " }}}
 
 " Fugitive settings {{{
@@ -254,16 +254,17 @@ endif
 " }}}
 
 " Extra {{{
-if has("gui_running")
-  set guifont=UbuntuMono\ 12
-  let g:solarized_menu=0
-  let g:solarized_termcolors=256
-  let g:solorized_bold=1
-  let g:solarized_underline=1
-  let g:solarized_italic=1
-  set background="dark"
-  colorscheme solarized
+set t_Co=256
+let g:solarized_termcolors=256
+set guifont=UbuntuMono\ 10
+let g:solarized_menu=0
+let g:solorized_bold=1
+let g:solarized_underline=1
+let g:solarized_italic=1
+set background=dark
+colorscheme solarized
 
+if has("gui_running")
   set guioptions-=m
   set guioptions-=T
   set guioptions-=r
