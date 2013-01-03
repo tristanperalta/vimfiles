@@ -71,6 +71,8 @@ set foldtext=MyFoldText()
 " }}}
 
 " Editor layout {{{
+"
+set t_Co=256
 set laststatus=2
 set number
 if ("gui_running")
@@ -140,6 +142,10 @@ noremap <C-d> :bw<CR>
 
 " Insert new line without entering instert mode
 map <S-Enter> o<Esc>k
+
+" Ctags shortcuts
+map <C-\> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+
 " }}}
 
 " DelimitMate settings {{{
