@@ -5,8 +5,38 @@ set encoding=utf-8
 " Use pathogen to easily modify the runtime path to include all plugins under
 " the ~/.vim/bundle directory
 filetype off
-call pathogen#infect()
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 filetype plugin indent on
+
+Bundle 'gmarik/vundle'
+
+" Bundles
+" sort by plugin name :16,39s/\/.*$ r
+Bundle 'mileszs/ack.vim'
+Bundle 'kien/ctrlp.vim'
+Bundle 'Raimondi/delimitMate'
+Bundle 'othree/html5.vim'
+Bundle 'vim-scripts/matchit.zip'
+Bundle 'fholgado/minibufexpl.vim'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/nerdtree'
+Bundle 'msanders/snipmate.vim'
+Bundle 'majutsushi/tagbar'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'tpope/vim-cucumber'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-fugitive'
+Bundle 'itspriddle/vim-jquery'
+Bundle 'slack/vim-l9'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'tpope/vim-ragtag'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-surround'
+Bundle 'nelstrom/vim-textobj-rubyblock'
+Bundle 'kana/vim-textobj-user'
 
 " Change the mapleader to '-' (It's easier in Dvorak keyboard layout)
 let mapleader = "-"
