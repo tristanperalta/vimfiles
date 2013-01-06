@@ -21,9 +21,10 @@ Installation
         $ ln -s ~/vimfiles/.vimrc .vimrc
         $ ln -s ~/vimfiles/ .vim
 
- 3. Initialize submodule
+ 3. Initialize submodule and bundles
 
         $ git submodule update --init
+        $ vim -c ':BundleInstall'
 
  4. For the Ctrl-s to work properly, add this to your .bashrc file
 
