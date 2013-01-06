@@ -1,5 +1,1 @@
-bundle/fuzzy-finder/doc/*
-bundle/minibufexpl.vim/doc/*
-bundle/snipmate.vim/doc/*
-bundle/vim-l9/doc/*
-bundle/vim-ragtag/doc/*
+bundle/*
