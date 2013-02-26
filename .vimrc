@@ -133,7 +133,6 @@ set showcmd
 
 " Shortcut mappings {{{
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
-nnoremap ; :
 nnoremap ! :!
 
 " Sudo to write
@@ -143,7 +142,6 @@ noremap <C-S-Tab> :bp<CR>
 noremap <C-Tab> :bn<CR>
 noremap <C-h> :bp<CR>
 noremap <C-l> :bn<CR>
-noremap <C-d> :bd<CR>
 
 " Ctrl-s like windows
 map <C-s> :w<CR>
@@ -167,8 +165,6 @@ vnoremap <Tab> %
 nnoremap <Space> za
 vnoremap <Space> za
 
-noremap <C-d> :bw<CR>
-
 " Insert new line without entering instert mode
 map <S-Enter> o<Esc>k
 
@@ -177,6 +173,8 @@ map <C-\> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
 " Reindent file
 map <Leader>i mmgg=G`m<CR>
+
+noremap <leader>d <Esc>:bd<CR>
 
 " }}}
 
@@ -286,7 +284,6 @@ endif
 " Extra {{{
 set t_Co=256
 let g:solarized_termcolors=256
-set guifont=UbuntuMono\ 10
 let g:solarized_menu=0
 let g:solorized_bold=1
 let g:solarized_underline=1
