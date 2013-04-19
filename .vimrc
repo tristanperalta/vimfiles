@@ -278,6 +278,11 @@ if has("autocmd")
         autocmd BufNewFile,BufReadPre *.md set wrap
     augroup end " }}}
 
+    augroup coffee_files " {{{
+        au!
+        autocmd BufNewFile,BufReadPre *.coffee set ft=coffee
+    augroup end " }}}
+
 endif
 " }}}
 
