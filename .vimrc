@@ -191,6 +191,8 @@ noremap <leader>b <Esc>:CtrlPBuffer<CR>
 map <F4> :CtrlPClearCache<CR>
 imap <F4> <Esc>:CtrlPClearCache<CR>i
 
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|svn|hg)|log|tmp|public\/.*$'
+
 :helptags $HOME/.vim/bundle/ctrlp.vim/doc
 " }}}
 
