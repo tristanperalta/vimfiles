@@ -37,6 +37,7 @@ Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-surround'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'kana/vim-textobj-user'
+Bundle 'nono/vim-handlebars'
 
 " Change the mapleader to '-' (It's easier in Dvorak keyboard layout)
 let mapleader = "-"
