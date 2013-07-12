@@ -176,7 +176,7 @@ map <C-\> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 " Reindent file
 map <Leader>i mmgg=G`m<CR>
 
-noremap <leader>d <Esc>:bd<CR>
+noremap <leader>d <Esc>:MBEbd<CR>
 
 " }}}
 
