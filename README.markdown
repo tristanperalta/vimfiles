@@ -1,7 +1,7 @@
 vimfiles
 ========
 
-Set of plugins and vim configuration. Uses pathogen to organize plugins.
+Set of plugins and vim configuration. Uses [vundle](https://github.com/gmarik/vundle) to organize plugins.
 
 Features
 ---------
@@ -30,9 +30,10 @@ Installation
 
         stty stop ''
 
- 5. Install inconsolata font
+ 5. Install required fonts
 
         $ sudo apt-get install ttf-inconsolata
+
 
 Basic Usage
 -----------
