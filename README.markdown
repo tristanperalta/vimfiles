@@ -7,7 +7,7 @@ Features
 ---------
  * Tree view
  * Tag view
- * [Binds <C-s> for saving](http://sigttou.com/vim-ctrl-s) (like windows).
+ * [Binds `<C-s>` for saving](http://sigttou.com/vim-ctrl-s) (like windows).
  * Search text pattern on each source file from (current working) directory recursively
 
 Installation
@@ -37,16 +37,16 @@ Installation
 Notes
 -----
 
-To fix the redraw problem, go to Compiz Setup Manager -> Workarounds -> (check) "Force full screen redraw (buffer swap) on repaint"
+To fix the redraw problem on Ubuntu, go to Compiz Setup Manager -> Workarounds -> (check) "Force full screen redraw (buffer swap) on repaint"
 
-Basie Usage
+Basic Usage
 -----------
- * to open fuzzy matching, <Leader>o
- * to open tree view, hit <Leader>t
+ * to open fuzzy matching, `<Leader>o`
+ * to open tree view, hit `<Leader>t`
  * to comment multiple lines, select lines
-   (using visual or select from mouse), <Leader>cc
- * Hold <C-h> or <C-l> to move between buffers
- * Hold <C-d> to delete current buffer (close file).
+   (using visual or select from mouse), `<Leader>cc`
+ * Hold `<C-h>` or `<C-l>` to move between buffers
+ * Hold `<C-d>` to delete current buffer (close file).
 
 Bundled Plugins
 ---------------
