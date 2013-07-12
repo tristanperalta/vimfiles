@@ -14,25 +14,25 @@ Installation
 ------------
 1. In your home directory, type
 
-    $ git clone git@bitbucket.org:tristan_ph/vimfiles.git
+        $ git clone git@bitbucket.org:tristan_ph/vimfiles.git
 
 2. Create symlinks
 
-   $ ln -s ~/vimfiles/.vimrc .vimrc
-   $ ln -s ~/vimfiles/ .vim
+        $ ln -s ~/vimfiles/.vimrc .vimrc
+        $ ln -s ~/vimfiles/ .vim
 
 3. Initialize submodule and bundles
 
-   $ git submodule update --init
-   $ vim -c ':BundleInstall'
+        $ git submodule update --init
+        $ vim -c ':BundleInstall'
 
 4. For the Ctrl-s to work properly, add this to your .bashrc file
 
-   stty stop ''
+        stty stop ''
 
 5. Install required fonts
 
-   $ sudo apt-get install ttf-inconsolata
+        $ sudo apt-get install ttf-inconsolata
 
 Notes
 -----
