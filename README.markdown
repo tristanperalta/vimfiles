@@ -12,30 +12,34 @@ Features
 
 Installation
 ------------
- 1. In your home directory, type
+1. In your home directory, type
 
-        $ git clone git@bitbucket.org:tristan_ph/vimfiles.git
+    $ git clone git@bitbucket.org:tristan_ph/vimfiles.git
 
- 2. Create symlinks
+2. Create symlinks
 
-        $ ln -s ~/vimfiles/.vimrc .vimrc
-        $ ln -s ~/vimfiles/ .vim
+   $ ln -s ~/vimfiles/.vimrc .vimrc
+   $ ln -s ~/vimfiles/ .vim
 
- 3. Initialize submodule and bundles
+3. Initialize submodule and bundles
 
-        $ git submodule update --init
-        $ vim -c ':BundleInstall'
+   $ git submodule update --init
+   $ vim -c ':BundleInstall'
 
- 4. For the Ctrl-s to work properly, add this to your .bashrc file
+4. For the Ctrl-s to work properly, add this to your .bashrc file
 
-        stty stop ''
+   stty stop ''
 
- 5. Install required fonts
+5. Install required fonts
 
-        $ sudo apt-get install ttf-inconsolata
+   $ sudo apt-get install ttf-inconsolata
 
+Notes
+-----
 
-Basic Usage
+To fix the redraw problem, go to Compiz Setup Manager -> Workarounds -> (check) "Force full screen redraw (buffer swap) on repaint"
+
+Basie Usage
 -----------
  * to open fuzzy matching, <Leader>o
  * to open tree view, hit <Leader>t
