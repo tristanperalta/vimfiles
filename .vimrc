@@ -301,6 +301,7 @@ set background=dark
 colorscheme solarized
 
 if has("gui_running")
+  set guifont=Inconsolata\ 10
   set guioptions-=m
   set guioptions-=T
   set guioptions-=r

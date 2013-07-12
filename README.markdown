@@ -30,6 +30,10 @@ Installation
 
         stty stop ''
 
+ 5. Install inconsolata font
+
+        $ sudo apt-get install ttf-inconsolata
+
 Basic Usage
 -----------
  * to open fuzzy matching, <Leader>o
