@@ -225,6 +225,15 @@ let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 nnoremap <leader>a :Ack
 " }}}
 
+" Solarized settings {{{
+let g:solarized_termcolors=256
+let g:solarized_menu=0
+let g:solorized_bold=1
+let g:solarized_underline=1
+let g:solarized_italic=1
+set background=dark
+" }}}
+
 " Filetype specific handling {{{
 if has("autocmd")
     augroup invisible_chars " {{{
