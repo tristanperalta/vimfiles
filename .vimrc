@@ -36,6 +36,7 @@ Bundle 'tpope/vim-ragtag'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-surround'
 Bundle 'nelstrom/vim-textobj-rubyblock'
+Bundle 'brettof86/vim-codeschool'
 Bundle 'kana/vim-textobj-user'
 Bundle 'nono/vim-handlebars'
 
@@ -292,15 +293,9 @@ endif
 
 " Extra {{{
 set t_Co=256
-let g:solarized_termcolors=256
-let g:solarized_menu=0
-let g:solorized_bold=1
-let g:solarized_underline=1
-let g:solarized_italic=1
-set background=dark
-colorscheme solarized
 
 if has("gui_running")
+  colorscheme codeschool
   set guifont=Inconsolata\ 10
   set guioptions-=m
   set guioptions-=T
