@@ -37,7 +37,7 @@ Installation
 Notes
 -----
 
-To fix the redraw problem on Ubuntu, go to Compiz Setup Manager -> Workarounds -> (check) "Force full screen redraw (buffer swap) on repaint"
+To fix the redraw problem on Ubuntu, go to Compiz Setup Manager &rarr; Workarounds &rarr; (check) "Force full screen redraw (buffer swap) on repaint"
 
 Basic Usage
 -----------
