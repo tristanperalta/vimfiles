@@ -240,7 +240,7 @@ set background=dark
 
 " Filetype specific handling {{{
 if has("autocmd")
-    autocmd BufNewFile,BufRead *.html.erb set filetype=html.eruby
+    autocmd BufNewFile,BufRead *.html,*.erb set filetype=html.eruby
 
     augroup invisible_chars " {{{
         au!
