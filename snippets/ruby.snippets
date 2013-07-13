@@ -340,12 +340,37 @@ snippet ::
 	"${1:key}" => "${2:value}"${3}
 
 snippet desc
-	describe do
-		${1}
+	describe ${1:"describe"} do
+		${2}
+	end
+snippet context
+	context "${1}" do
+		${2}
 	end
 snippet it
-	it do
-		${1}
+	it "${1}" do
+		${2}
 	end
 snippet let
-	let(:${1}) { ${2} }
+	let(:${1}) { ${2} }${3}
+snippet let!
+	let!(:${1}) { ${2} }${3}
+snippet before
+	before do
+		${1}
+	end
+snippet expect
+	expect(${1}).to ${2}
+snippet expect:eq
+	expect(${1}).to eq ${2}
+snippet expect:be
+	expect(${1}).to be_${2}
+snippet expect:true
+	expect(${1}).to be_true${2}
+snippet expect:false
+	expect(${1}).to be_false${2}
+snippet expect:error
+	expect(${1}).to raise_error${2}
+snippet expect:receive
+	expect(${1}).to receive(${2}) ${3}
+
