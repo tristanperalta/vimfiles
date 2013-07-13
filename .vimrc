@@ -23,7 +23,6 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'msanders/snipmate.vim'
 Bundle 'majutsushi/tagbar'
 Bundle 'kchmck/vim-coffee-script'
-Bundle 'altercation/vim-colors-solarized'
 Bundle 'tpope/vim-cucumber'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'tpope/vim-endwise'
@@ -35,8 +34,8 @@ Bundle 'tpope/vim-ragtag'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-surround'
 Bundle 'nelstrom/vim-textobj-rubyblock'
-Bundle 'brettof86/vim-codeschool'
 Bundle 'kana/vim-textobj-user'
+Bundle 'chriskempson/vim-tomorrow-theme'
 Bundle 'nono/vim-handlebars'
 
 " Change the mapleader to '-' (It's easier in Dvorak keyboard layout)
@@ -228,15 +227,6 @@ let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 nnoremap <leader>a :Ack
 " }}}
 
-" Solarized settings {{{
-let g:solarized_termcolors=256
-let g:solarized_menu=0
-let g:solorized_bold=1
-let g:solarized_underline=1
-let g:solarized_italic=1
-set background=dark
-" }}}
-
 " Filetype specific handling {{{
 if has("autocmd")
     autocmd BufNewFile,BufRead *.html,*.erb set filetype=html.eruby
@@ -307,9 +297,9 @@ endif
 
 " Extra {{{
 set t_Co=256
+colorscheme Tomorrow-Night
 
 if has("gui_running")
-  colorscheme codeschool
   set guifont=Inconsolata\ 11
   set guioptions-=m
   set guioptions-=T
