@@ -187,7 +187,7 @@ let delimitMate_excluded_regions = "Comments"
 " }}}
 
 " CtrlP settings {{{
-noremap <leader>o <Esc>:CtrlP<CR>
+let g:ctrlp_map = '<Leader>o'
 noremap <leader>b <Esc>:CtrlPBuffer<CR>
 
 map <F4> :CtrlPClearCache<CR>
