@@ -193,7 +193,6 @@ noremap <leader>b <Esc>:CtrlPBuffer<CR>
 map <F4> :CtrlPClearCache<CR>
 imap <F4> <Esc>:CtrlPClearCache<CR>i
 
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|svn|hg)|log|tmp|public\/.*$'
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files']
 
 :helptags $HOME/.vim/bundle/ctrlp.vim/doc
@@ -311,7 +310,7 @@ set t_Co=256
 
 if has("gui_running")
   colorscheme codeschool
-  set guifont=Inconsolata\ 10
+  set guifont=Inconsolata\ 11
   set guioptions-=m
   set guioptions-=T
   set guioptions-=r
