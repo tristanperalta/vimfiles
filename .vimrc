@@ -207,6 +207,10 @@ noremap <leader>t :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 " }}}
 
+" Snipmate {{{
+let g:snippets_dir="~/.vim/snippets/"
+" }}}
+
 " Fugitive settings {{{
 autocmd BufReadPost fugitive://* set bufhidden=delete
 
@@ -236,6 +240,8 @@ set background=dark
 
 " Filetype specific handling {{{
 if has("autocmd")
+    autocmd BufNewFile,BufRead *.html.erb set filetype=html.eruby
+
     augroup invisible_chars " {{{
         au!
         " show invisible characters in all of these files
