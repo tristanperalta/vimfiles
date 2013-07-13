@@ -140,10 +140,10 @@ nnoremap ! :!
 " Sudo to write
 cmap w!! w !sudo tee % >/dev/null
 
-noremap <C-S-Tab> :bp<CR>
-noremap <C-Tab> :bn<CR>
-noremap <C-h> :bp<CR>
-noremap <C-l> :bn<CR>
+noremap <C-Tab> :MBEbn<CR>
+noremap <C-S-Tab> :MBEbp<CR>
+noremap <C-l> :MBEbn<CR>
+noremap <C-h> :MBEbp<CR>
 noremap Y y$
 
 " Ctrl-s like windows
