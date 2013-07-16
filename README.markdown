@@ -16,7 +16,7 @@ Installation
 
         $ git clone git@bitbucket.org:tristan_ph/vimfiles.git
 
-2. Create symlinks
+2. Remove existing `.vim` directory and `.vimrc` file and create symlinks
 
         $ ln -s ~/vimfiles/.vimrc .vimrc
         $ ln -s ~/vimfiles/ .vim
