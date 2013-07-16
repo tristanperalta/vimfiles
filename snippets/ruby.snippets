@@ -338,7 +338,6 @@ snippet :
 	${1:key}: ${2:"value"}${3}
 snippet ::
 	"${1:key}" => "${2:value}"${3}
-
 snippet desc
 	describe ${1:"describe"} do
 		${2}
@@ -372,5 +371,6 @@ snippet expect:false
 snippet expect:error
 	expect(${1}).to raise_error${2}
 snippet expect:receive
-	expect(${1}).to receive(${2}) ${3}
-
+	expect(${1}).to receive(${2})${3}
+snippet expect:change
+	expect(${1}).to change { ${2} }

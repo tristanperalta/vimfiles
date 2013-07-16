@@ -83,19 +83,19 @@ set foldmethod=marker
 set foldlevelstart=0
 set foldopen=block,hor,insert,jump,mark,percent,quickfix,search,tag,undo
 function! MyFoldText()
-    let line = getline(v:foldstart)
+  let line = getline(v:foldstart)
 
-    let nucolwidth = &fdc + &number * &numberwidth
-    let windowwidth = winwidth(0) - nucolwidth - 3
-    let foldedlinecount = v:foldend - v:foldstart
+  let nucolwidth = &fdc + &number * &numberwidth
+  let windowwidth = winwidth(0) - nucolwidth - 3
+  let foldedlinecount = v:foldend - v:foldstart
 
-    " expand tabs into spaces
-    let onetab = strpart(' ', 0, &tabstop)
-    let line = substitute(line, '\t', onetab, 'g')
+  " expand tabs into spaces
+  let onetab = strpart(' ', 0, &tabstop)
+  let line = substitute(line, '\t', onetab, 'g')
 
-    let line = strpart(line, 0, windowwidth - 2 -len(foldedlinecount))
-    let fillcharcount = windowwidth - len(line) - len(foldedlinecount) - 4
-    return line . ' …' . repeat(" ",fillcharcount) . foldedlinecount . ' '
+  let line = strpart(line, 0, windowwidth - 2 -len(foldedlinecount))
+  let fillcharcount = windowwidth - len(line) - len(foldedlinecount) - 4
+  return line . ' …' . repeat(" ",fillcharcount) . foldedlinecount . ' '
 endfunction
 set foldtext=MyFoldText()
 " }}}
@@ -229,68 +229,68 @@ nnoremap <leader>a :Ack
 
 " Filetype specific handling {{{
 if has("autocmd")
-    autocmd BufNewFile,BufRead *.html,*.erb set filetype=html.eruby
+  autocmd BufNewFile,BufRead *.html,*.erb set filetype=html.eruby
 
-    augroup invisible_chars " {{{
-        au!
-        " show invisible characters in all of these files
-        autocmd BufWritePre * :%s/\s\+$//e
-        autocmd filetype vim set expandtab
-        autocmd filetype vim setlocal list
-        autocmd filetype python,rst setlocal list
-        autocmd filetype ruby setlocal list
-        autocmd filetype javascript,css setlocal list
-        autocmd filetype php setlocal list
-    augroup end " }}}
+  augroup invisible_chars " {{{
+    au!
+    " show invisible characters in all of these files
+    autocmd BufWritePre * :%s/\s\+$//e
+    autocmd filetype vim set expandtab
+    autocmd filetype vim setlocal list
+    autocmd filetype python,rst setlocal list
+    autocmd filetype ruby setlocal list
+    autocmd filetype javascript,css setlocal list
+    autocmd filetype php setlocal list
+  augroup end " }}}
 
-    augroup vim_files " {{{
-        au!
-        " bind <F1> to show the keyword under cursor
-        " general help can still be entered manually with :h
-        autocmd filetype vim noremap <buffer> <F1> <Esc>:help <C-r><C-w><CR>
-        autocmd filetype vim noremap! <buffer> <F1> <Esc>:help <C-r><C-w><CR>
+  augroup vim_files " {{{
+    au!
+    " bind <F1> to show the keyword under cursor
+    " general help can still be entered manually with :h
+    autocmd filetype vim noremap <buffer> <F1> <Esc>:help <C-r><C-w><CR>
+    autocmd filetype vim noremap! <buffer> <F1> <Esc>:help <C-r><C-w><CR>
 
-        " Reload settings when changed
-        autocmd BufWritePost .vimrc source $MYVIMRC
-    augroup end " }}}
+    " Reload settings when changed
+    autocmd BufWritePost .vimrc source $MYVIMRC
+  augroup end " }}}
 
-    augroup bash_files " {{{
-        au!
-        autocmd filetype bash set shiftwidth=1 softtabstop=2 expandtab
+  augroup bash_files " {{{
+    au!
+    autocmd filetype bash set shiftwidth=1 softtabstop=2 expandtab
 
-    augroup end " }}}
+  augroup end " }}}
 
-    augroup ruby_files " {{{
-        au!
-        " autoindent with two spaces, always expand tabs
-        autocmd filetype ruby,eruby,yaml set shiftwidth=2 softtabstop=2 expandtab
-        autocmd BufReadPre *.prawn,Guardfile,Capfile,config.ru,Thorfile,Rakefile,Gemfile set ft=ruby
-    augroup end " }}}
+  augroup ruby_files " {{{
+    au!
+    " autoindent with two spaces, always expand tabs
+    autocmd filetype ruby,eruby,yaml set shiftwidth=2 softtabstop=2 expandtab
+    autocmd BufReadPre *.prawn,Guardfile,Capfile,config.ru,Thorfile,Rakefile,Gemfile set ft=ruby
+  augroup end " }}}
 
-    augroup php_files " {{{
-        au!
-        autocmd filetype ctp set filetype=php.html set expandtab
-    augroup end " }}}
+  augroup php_files " {{{
+    au!
+    autocmd filetype ctp set filetype=php.html set expandtab
+  augroup end " }}}
 
-    augroup coffeescript_files " {{{
-        au!
-        autocmd BufNewFile,BufReadPre *.coffee noremap <f9> :CoffeeRun<CR>
-    augroup end " }}}
+  augroup coffeescript_files " {{{
+    au!
+    autocmd BufNewFile,BufReadPre *.coffee noremap <f9> :CoffeeRun<CR>
+  augroup end " }}}
 
-    augroup javascript_files " {{{
-        au!
-        autocmd BufNewFile,BufReadPre *.js set shiftwidth=2 softtabstop=2 expandtab
-    augroup end " }}}
+  augroup javascript_files " {{{
+    au!
+    autocmd BufNewFile,BufReadPre *.js set shiftwidth=2 softtabstop=2 expandtab
+  augroup end " }}}
 
-    augroup markdown_files " {{{
-        au!
-        autocmd BufNewFile,BufReadPre *.md set wrap
-    augroup end " }}}
+  augroup markdown_files " {{{
+    au!
+    autocmd BufNewFile,BufReadPre *.md set wrap
+  augroup end " }}}
 
-    augroup coffee_files " {{{
-        au!
-        autocmd BufNewFile,BufReadPre *.coffee set ft=coffee
-    augroup end " }}}
+  augroup coffee_files " {{{
+    au!
+    autocmd BufNewFile,BufReadPre *.coffee set ft=coffee
+  augroup end " }}}
 
 endif
 " }}}
