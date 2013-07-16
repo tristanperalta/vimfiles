@@ -297,7 +297,7 @@ endif
 
 " Extra {{{
 set t_Co=256
-colorscheme Tomorrow-Night
+colorscheme Tomorrow-Night-Bright
 
 if has("gui_running")
   set guifont=Inconsolata\ 11
