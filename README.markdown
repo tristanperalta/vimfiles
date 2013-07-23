@@ -33,6 +33,8 @@ Installation
 5. Install required fonts
 
         $ sudo apt-get install ttf-inconsolata
+        
+        $ sudo fc-cache -fv # update font-cache
 
 Notes
 -----
