@@ -12,12 +12,13 @@ Features
 
 Installation
 ------------
-1. In your home directory, type
+1. In your home directory, execute
 
         $ git clone git@bitbucket.org:tristan_ph/vimfiles.git
 
 2. Remove existing `.vim` directory and `.vimrc` file and create symlinks
 
+        $ rm -rf ~/.vim ~/.vimrc
         $ ln -s ~/vimfiles/.vimrc .vimrc
         $ ln -s ~/vimfiles/ .vim
 
@@ -28,7 +29,8 @@ Installation
 
 4. For the Ctrl-s to work properly, add this to your .bashrc file
 
-        stty stop ''
+        $ echo "stty stop ''" >> ~/.bashrc
+        $ source ~/.bashrc
 
 5. Install required fonts (optional, only when using X display such as gVim)
 
