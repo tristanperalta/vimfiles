@@ -30,10 +30,9 @@ Installation
 
         stty stop ''
 
-5. Install required fonts
+5. Install required fonts (optional, only when using X display such as gVim)
 
         $ sudo apt-get install ttf-inconsolata
-        
         $ sudo fc-cache -fv # update font-cache
 
 Notes
