@@ -265,7 +265,7 @@ if has("autocmd")
     au!
     " autoindent with two spaces, always expand tabs
     autocmd filetype ruby,eruby,yaml set shiftwidth=2 softtabstop=2 expandtab
-    autocmd BufReadPre *.prawn,Guardfile,Capfile,config.ru,Thorfile,Rakefile,Gemfile set ft=ruby
+    autocmd BufReadPre *.prawn,Guardfile,Capfile,config.ru,Thorfile,Rakefile,Gemfile,*.rabl set ft=ruby
   augroup end " }}}
 
   augroup php_files " {{{
