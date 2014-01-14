@@ -293,6 +293,11 @@ if has("autocmd")
     autocmd BufNewFile,BufReadPre *.coffee set ft=coffee
   augroup end " }}}
 
+  augroup haml_files " {{{
+    au!
+    autocmd BufNewFile,BufReadPre *.hamlc set ft=haml
+  augroup end " }}}
+
 endif
 " }}}
 
