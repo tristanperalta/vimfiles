@@ -102,6 +102,7 @@ set foldtext=MyFoldText()
 
 " Editor layout {{{
 "
+set colorcolumn=80
 set laststatus=2
 set number
 if ("gui_running")
