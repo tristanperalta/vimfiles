@@ -36,7 +36,8 @@ Bundle 'tpope/vim-surround'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'kana/vim-textobj-user'
 Bundle 'chriskempson/vim-tomorrow-theme'
-Bundle 'nono/vim-handlebars'
+Bundle 'plasticboy/vim-markdown'
+
 
 " Change the mapleader to '-' (It's easier in Dvorak keyboard layout)
 let mapleader = "-"
@@ -48,7 +49,7 @@ set smarttab
 set autoindent
 set copyindent
 set mouse=a
-set nowrap
+set wrap
 
 " searching and moving
 
@@ -283,11 +284,6 @@ if has("autocmd")
     autocmd BufNewFile,BufReadPre *.js set shiftwidth=2 softtabstop=2 expandtab
   augroup end " }}}
 
-  augroup markdown_files " {{{
-    au!
-    autocmd BufNewFile,BufReadPre *.md set wrap
-  augroup end " }}}
-
   augroup coffee_files " {{{
     au!
     autocmd BufNewFile,BufReadPre *.coffee set ft=coffee
@@ -296,6 +292,11 @@ if has("autocmd")
   augroup haml_files " {{{
     au!
     autocmd BufNewFile,BufReadPre *.hamlc set ft=haml
+  augroup end " }}}
+
+  augroup markdown_files " {{{
+    au!
+    autocmd BufNewFile,BufReadPre *.md,*.markdown set ft=markdown wrap
   augroup end " }}}
 
 endif
