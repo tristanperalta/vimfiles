@@ -232,6 +232,10 @@ let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 nnoremap <leader>a :Ack
 " }}}
 
+" Easymotion settings {{{
+let g:EasyMotion_keys="aoeuidhtnspkgm"
+" }}}
+
 " Filetype specific handling {{{
 if has("autocmd")
   autocmd BufNewFile,BufRead *.html,*.erb set filetype=html.eruby
