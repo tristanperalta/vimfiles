@@ -38,10 +38,12 @@ Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'kana/vim-textobj-user'
 Bundle 'chriskempson/vim-tomorrow-theme'
 Bundle 'plasticboy/vim-markdown'
-
+Bundle 'junegunn/vim-easy-align'
 
 " Change the mapleader to '-' (It's easier in Dvorak keyboard layout)
 let mapleader = "-"
+
+vmap <Enter> <Plug>(EasyAlign)
 
 " Editing behavior {{{
 set shiftround
