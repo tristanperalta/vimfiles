@@ -25,7 +25,7 @@ Installation
 3. Initialize submodule and bundles
 
         $ git submodule update --init
-        $ vim -c ':BundleInstall'
+        $ vim -c ':PluginInstall'
 
 4. For the Ctrl-s to work properly, add this to your .bashrc file
 
