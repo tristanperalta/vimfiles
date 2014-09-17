@@ -317,7 +317,6 @@ endif
 " }}}
 
 " Extra {{{
-set t_Co=256
 colorscheme Tomorrow-Night-Bright
 
 if has("gui_running")
