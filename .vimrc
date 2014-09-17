@@ -7,8 +7,8 @@ set encoding=utf-8
 " the ~/.vim/bundle directory
 filetype off
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-filetype plugin indent on
+
+call vundle#begin()
 
 Bundle 'gmarik/vundle'
 
@@ -40,6 +40,9 @@ Bundle 'kana/vim-textobj-user'
 Bundle 'chriskempson/vim-tomorrow-theme'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'junegunn/vim-easy-align'
+
+call vundle#end()
+filetype plugin indent on
 
 " Change the mapleader to '-' (It's easier in Dvorak keyboard layout)
 let mapleader = "-"
