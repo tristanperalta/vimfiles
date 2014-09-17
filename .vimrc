@@ -1,4 +1,5 @@
 " Use vim settings, rather than vi settings
+set shell=/bin/bash
 set nocompatible
 set encoding=utf-8
 
