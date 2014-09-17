@@ -144,6 +144,9 @@ set showcmd
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 nnoremap ! :!
 
+map <F5> :redraw!<CR>
+imap <F5> <Esc>:redraw!<CR>i
+
 " Sudo to write
 cmap w!! w !sudo tee % >/dev/null
 
