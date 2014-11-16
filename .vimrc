@@ -119,6 +119,10 @@ if ("gui_running")
 endif
 " }}}
 
+" Vim Markdown {{{
+let g:vim_markdown_folding_disabled=1
+" }}}
+
 " Vim behavior {{{
 syntax on
 set hidden
