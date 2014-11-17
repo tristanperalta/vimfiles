@@ -319,7 +319,6 @@ endif
 " }}}
 
 " Extra {{{
-colorscheme Tomorrow-Night-Bright
 
 if has("gui_running")
   set guifont=Inconsolata\ 11
