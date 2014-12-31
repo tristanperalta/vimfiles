@@ -13,33 +13,33 @@ call vundle#begin()
 Plugin 'gmarik/vundle'
 
 " Plugins
-" sort by plugin name :<range>sort /\/.*$/r
+" sort by plugin name :16,39s/\/.*$ r
 Plugin 'mileszs/ack.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Raimondi/delimitMate'
 Plugin 'vim-scripts/matchit.zip'
+Plugin 'fholgado/minibufexpl.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'msanders/snipmate.vim'
 Plugin 'majutsushi/tagbar'
-Plugin 'ap/vim-buftabline'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-cucumber'
-Plugin 'junegunn/vim-easy-align'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-repeat'
 Plugin 'itspriddle/vim-jquery'
 Plugin 'slack/vim-l9'
-Plugin 'plasticboy/vim-markdown'
 Plugin 'Lokaltog/vim-powerline'
 Plugin 'tpope/vim-ragtag'
 Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'kana/vim-textobj-user'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'junegunn/vim-easy-align'
 
 call vundle#end()
 filetype plugin indent on
@@ -154,8 +154,10 @@ imap <F5> <Esc>:redraw!<CR>i
 " Sudo to write
 cmap w!! w !sudo tee % >/dev/null
 
-noremap <C-n> :bnext<CR>
-noremap <C-p> :bprev<CR>
+noremap <C-Tab> :MBEbn<CR>
+noremap <C-S-Tab> :MBEbp<CR>
+noremap <C-l> :MBEbn<CR>
+noremap <C-h> :MBEbp<CR>
 noremap Y y$
 
 " Ctrl-s like windows
