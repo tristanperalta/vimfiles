@@ -154,8 +154,8 @@ imap <F5> <Esc>:redraw!<CR>i
 " Sudo to write
 cmap w!! w !sudo tee % >/dev/null
 
-noremap <C-l> :bnext<CR>
-noremap <C-h> :bprev<CR>
+noremap <C-n> :bnext<CR>
+noremap <C-p> :bprev<CR>
 noremap Y y$
 
 " Ctrl-s like windows
@@ -189,7 +189,7 @@ map <C-\> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 " Reindent file
 map <Leader>i mmgg=G`m<CR>
 
-noremap <leader>d <Esc>:MBEbd<CR>
+noremap <leader>d <Esc>:bdel<CR>
 
 " }}}
 
