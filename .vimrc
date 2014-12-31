@@ -156,8 +156,8 @@ cmap w!! w !sudo tee % >/dev/null
 
 noremap <C-Tab> :MBEbn<CR>
 noremap <C-S-Tab> :MBEbp<CR>
-noremap <C-l> :MBEbn<CR>
-noremap <C-h> :MBEbp<CR>
+noremap <C-n> :MBEbn<CR>
+noremap <C-p> :MBEbp<CR>
 noremap Y y$
 
 " Ctrl-s like windows
