@@ -31,7 +31,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-repeat'
 Plugin 'itspriddle/vim-jquery'
 Plugin 'slack/vim-l9'
-Plugin 'Lokaltog/vim-powerline'
+Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-ragtag'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-surround'
@@ -40,6 +40,7 @@ Plugin 'kana/vim-textobj-user'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'junegunn/vim-easy-align'
+Plugin 'wting/rust.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -110,7 +111,6 @@ set foldtext=MyFoldText()
 
 " Editor layout {{{
 "
-set colorcolumn=80
 set laststatus=2
 set number
 if ("gui_running")
