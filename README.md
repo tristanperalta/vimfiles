@@ -18,9 +18,9 @@ Installation
 
 2. Remove existing `.vim` directory and `.vimrc` file and create symlinks
 
-        $ rm -rf ~/.vim ~/.vimrc
-        $ ln -s ~/vimfiles/.vimrc .vimrc
-        $ ln -s ~/vimfiles/ .vim
+        $ mkdir -p ${HOME}/.config/
+        $ ln -s ~/.vim .config/nvim
+        $ ln -s ~/.vimrc .config/nvim/init.vim
 
 3. Initialize submodule and bundles
 
