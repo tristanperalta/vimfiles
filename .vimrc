@@ -4,16 +4,16 @@ set nocompatible
 set encoding=utf-8
 
 " Use pathogen to easily modify the runtime path to include all plugins under
-" the ~/.vim/bundle directory
+" the ~/.config/nvim/bundle directory
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim/
+set rtp+=~/.config/nvim/bundle/Vundle.vim/
 
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
 " Plugins
-" sort by plugin name :16,39s/\/.*$ r
+" sort by plugin name :17,43s/\/.*$ sort
 Plugin 'mileszs/ack.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Raimondi/delimitMate'
@@ -23,16 +23,13 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'msanders/snipmate.vim'
 Plugin 'majutsushi/tagbar'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'tpope/vim-cucumber'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-fugitive'
+Plugin 'fatih/vim-go'
 Plugin 'tpope/vim-repeat'
-Plugin 'itspriddle/vim-jquery'
 Plugin 'slack/vim-l9'
-Plugin 'bling/vim-airline'
-Plugin 'tpope/vim-ragtag'
+Plugin 'rafi/vim-tinyline'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-surround'
 Plugin 'nelstrom/vim-textobj-rubyblock'
@@ -40,7 +37,10 @@ Plugin 'kana/vim-textobj-user'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'junegunn/vim-easy-align'
+Plugin 'chase/vim-ansible-yaml'
 Plugin 'wting/rust.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'tomlion/vim-solidity'
 
 call vundle#end()
 filetype plugin indent on
@@ -148,8 +148,8 @@ set showcmd
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 nnoremap ! :!
 
-map <F5> :redraw!<CR>
-imap <F5> <Esc>:redraw!<CR>i
+map <F5> :!make<CR>
+imap <F5> <Esc>:!make<CR>i
 
 " Sudo to write
 cmap w!! w !sudo tee % >/dev/null
@@ -240,6 +240,7 @@ nmap <leader>gp :Git push<CR>
 
 " Ack settings {{{
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+let g:ack_default_options = " --ignore-dir=log/"
 nnoremap <leader>a :Ack
 " }}}
 
@@ -249,7 +250,7 @@ let g:EasyMotion_keys="aoeuidhtnspkgm"
 
 " Filetype specific handling {{{
 if has("autocmd")
-  autocmd BufNewFile,BufRead *.html,*.erb set filetype=html.eruby
+  autocmd BufNewFile,BufRead *.html,*.erb,*.handlebars set filetype=html.eruby
 
   augroup invisible_chars " {{{
     au!
