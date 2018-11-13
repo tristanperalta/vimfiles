@@ -41,6 +41,7 @@ Plugin 'chase/vim-ansible-yaml'
 Plugin 'wting/rust.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'tomlion/vim-solidity'
+Plugin 'leafgarland/typescript-vim'
 
 call vundle#end()
 filetype plugin indent on
