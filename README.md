@@ -1,49 +1,54 @@
-vimfiles
-========
+# vimfiles
 
 Set of plugins and vim configuration. Uses [vundle](https://github.com/gmarik/vundle) to organize plugins.
 
-Features
----------
+## Features
  * Tree view
  * Tag view
  * [Binds `<C-s>` for saving](http://sigttou.com/vim-ctrl-s) (like windows).
  * Search text pattern on each source file from (current working) directory recursively
 
-Installation
-------------
+## Installation
 1. In your home directory, execute
 
-        $ git clone git@bitbucket.org:tristan_ph/vimfiles.git
+```bash
+$ git clone git@github.com:tristanperalta/vimfiles.git
+```
 
-2. Remove existing `.vim` directory and `.vimrc` file and create symlinks
+1. Remove existing `.vim` directory and `.vimrc` file and create symlinks
 
-        $ mkdir -p ${HOME}/.config/
-        $ ln -s ~/.vim .config/nvim
-        $ ln -s ~/.vimrc .config/nvim/init.vim
+```bash
+$ [ -d ${HOME} ] || mkdir -p ${HOME}/.config/
+$ cd .config/ && ln -s ~/vimfiles nvim
+$ cd .config/nvim && ln -s ~/vimfiles/.vimrc init.vim
+```
 
-3. Initialize submodule and bundles
+1. Initialize submodule and bundles
 
-        $ git submodule update --init
-        $ vim -c ':PluginInstall'
+```bash
+$ git submodule update --init
+$ vim -c ':PluginInstall'
+```
 
-4. For the Ctrl-s to work properly, add this to your .bashrc file
+1. For the Ctrl-s to work properly, add this to your .bashrc file
 
-        $ echo "stty stop ''" >> ~/.bashrc
-        $ source ~/.bashrc
+```bash
+$ echo "stty stop ''" >> ~/.bashrc
+$ source ~/.bashrc
+```
 
-5. Install required fonts (optional, only when using X display such as gVim)
+1. Install required fonts (optional, only when using X display such as gVim)
 
-        $ sudo apt-get install ttf-inconsolata
-        $ sudo fc-cache -fv # update font-cache
+```bash
+$ sudo apt-get install ttf-inconsolata
+$ sudo fc-cache -fv # update font-cache
+```
 
-Notes
------
+## Notes
 
 To fix the redraw problem on Ubuntu, go to Compiz Setup Manager &rarr; Workarounds &rarr; (check) "Force full screen redraw (buffer swap) on repaint"
 
-Basic Usage
------------
+# Basic Usage
  * to open fuzzy matching, `<Leader>o`
  * to open tree view, hit `<Leader>t`
  * to comment multiple lines, select lines
@@ -51,8 +56,7 @@ Basic Usage
  * Hold `<C-h>` or `<C-l>` to move between buffers
  * Hold `<C-d>` to delete current buffer (close file).
 
-Bundled Plugins
----------------
+# Bundled Plugins
  * [ack.vim](https://github.com/mileszs/ack.vim) - type <leader> - A to initiate search
  * [delimitmate](https://github.com/Raimondi/delimitMate.git) - autocompletion of quotes, parenthesis, brackets etc.
  * [CtrlP](https://github.com/kien/ctrlp.vim) - implements TextMate cmd-T functionality
