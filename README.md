@@ -30,6 +30,8 @@ $ git submodule update --init
 $ vim -c ':PluginInstall'
 ```
 
+run `yarn install --frozen-lockfile` on coc.nvim directory after plugin install
+
 1. For the Ctrl-s to work properly, add this to your .bashrc file
 
 ```bash

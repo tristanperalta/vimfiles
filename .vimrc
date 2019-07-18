@@ -34,17 +34,8 @@ Plugin 'nelstrom/vim-textobj-block'
 Plugin 'kana/vim-textobj-user'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'junegunn/vim-easy-align'
-" Language based plugins
-Plugin 'chase/vim-ansible-yaml'
-Plugin 'elixir-editors/vim-elixir'
-Plugin 'fatih/vim-go'
-Plugin 'keith/swift.vim'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'tomlion/vim-solidity'
-Plugin 'tpope/vim-rails'
-Plugin 'wting/rust.vim'
+Plugin 'sheerun/vim-polyglot'
+Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 
 call vundle#end()
 filetype plugin indent on
@@ -324,6 +315,8 @@ if has("autocmd")
 
 endif
 " }}}
+
+autocmd Filetype swift setlocal tabstop=4 shiftwidth=4 expandtab
 
 " Extra {{{
 
