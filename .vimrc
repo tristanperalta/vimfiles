@@ -108,10 +108,7 @@ set foldtext=MyFoldText()
 "
 set laststatus=2
 set number
-if ("gui_running")
-  set lines=40
-  set columns=120
-endif
+set cmdheight=2
 " }}}
 
 " Vim Markdown {{{
@@ -317,16 +314,3 @@ endif
 " }}}
 
 autocmd Filetype swift setlocal tabstop=4 shiftwidth=4 expandtab
-
-" Extra {{{
-
-if has("gui_running")
-  set guifont=Inconsolata\ 11
-  set guioptions-=m
-  set guioptions-=T
-  set guioptions-=r
-  set guioptions-=R
-  set guioptions-=l
-  set guioptions-=L
-endif
-"}}}
