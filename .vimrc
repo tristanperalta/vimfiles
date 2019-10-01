@@ -6,39 +6,41 @@ set encoding=utf-8
 " Use pathogen to easily modify the runtime path to include all plugins under
 " the ~/.config/nvim/bundle directory
 filetype off
-set rtp+=~/.config/nvim/bundle/Vundle.vim/
 
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
+call plug#begin('~/.config/nvim/plugged')
 
 " Plugins
 " sort by plugin name :17,43s/\/.*$ sort
-Plugin 'mileszs/ack.vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'Raimondi/delimitMate'
-Plugin 'vim-scripts/matchit.zip'
-Plugin 'fholgado/minibufexpl.vim'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/nerdtree'
-Plugin 'msanders/snipmate.vim'
-Plugin 'majutsushi/tagbar'
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'tpope/vim-endwise'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-repeat'
-Plugin 'slack/vim-l9'
-Plugin 'rafi/vim-tinyline'
-Plugin 'tpope/vim-surround'
-Plugin 'kana/vim-textobj-user'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'junegunn/vim-easy-align'
-Plugin 'sheerun/vim-polyglot'
-Plugin 'neoclide/coc.nvim', {'branch': 'release'}
-Plugin 'gilligan/vim-lldb'
-Plugin 'vim-syntastic/syntastic'
+Plug 'mileszs/ack.vim'
+Plug 'kien/ctrlp.vim'
+Plug 'Raimondi/delimitMate'
+Plug 'vim-scripts/matchit.zip'
+Plug 'fholgado/minibufexpl.vim'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'msanders/snipmate.vim'
+Plug 'majutsushi/tagbar'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-repeat'
+Plug 'slack/vim-l9'
+Plug 'rafi/vim-tinyline'
+Plug 'tpope/vim-surround'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'junegunn/vim-easy-align'
+Plug 'chase/vim-ansible-yaml'
+Plug 'elixir-editors/vim-elixir'
+Plug 'fatih/vim-go'
+Plug 'keith/swift.vim'
+Plug 'leafgarland/typescript-vim'
+Plug 'pangloss/vim-javascript'
+Plug 'plasticboy/vim-markdown'
+Plug 'tomlion/vim-solidity'
+Plug 'tpope/vim-rails'
+Plug 'wting/rust.vim'
 
-call vundle#end()
+call plug#end()
 filetype plugin indent on
 
 " Change the mapleader to '-' (It's easier in Dvorak keyboard layout)
