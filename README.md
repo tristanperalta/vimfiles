@@ -23,10 +23,11 @@ $ cd .config/ && ln -s ~/vimfiles nvim
 $ cd .config/nvim && ln -s ~/vimfiles/.vimrc init.vim
 ```
 
-1. Initialize submodule and bundles
+1. Install vim-plug
 
 ```bash
-$ git submodule update --init
+$ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 $ vim -c ':PluginInstall'
 ```
 
