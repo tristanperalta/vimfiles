@@ -39,6 +39,7 @@ Plug 'plasticboy/vim-markdown'
 Plug 'tomlion/vim-solidity'
 Plug 'tpope/vim-rails'
 Plug 'wting/rust.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 filetype plugin indent on
@@ -202,7 +203,6 @@ imap <F4> <Esc>:CtrlPClearCache<CR>i
 
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files']
 
-:helptags $HOME/.vim/bundle/ctrlp.vim/doc
 " }}}
 
 " NERDTree settings {{{
