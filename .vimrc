@@ -85,6 +85,7 @@ set listchars=tab:▸\ ,eol:¬,trail:·,extends:#,nbsp:·
 " }}}
 
 " Folding rules {{{
+let g:vim_markdown_folding_disabled = 1
 set foldenable
 set foldcolumn=2
 set foldmethod=marker
