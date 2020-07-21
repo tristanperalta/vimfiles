@@ -26,7 +26,8 @@ $ cd .config/nvim && ln -s ~/vimfiles/.vimrc init.vim
 1. Install vim-plug
 
 ```bash
-$ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+$ cd $HOME/vimfiles/
+$ curl -fLo autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 $ vim -c ':PluginInstall'
 ```
