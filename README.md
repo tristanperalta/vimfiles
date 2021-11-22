@@ -18,20 +18,15 @@ $ git clone git@github.com:tristanperalta/vimfiles.git
 1. Remove existing `.vim` directory and `.vimrc` file and create symlinks
 
 ```bash
-$ [ -d ${HOME} ] || mkdir -p ${HOME}/.config/
-$ cd .config/ && ln -s ~/vimfiles nvim
-$ cd .config/nvim && ln -s ~/vimfiles/.vimrc init.vim
+$ [ -d ${HOME} ] || mkdir -p ${HOME}/.config/nvim
 ```
 
 1. Install vim-plug
 
 ```bash
-$ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-$ vim -c ':PluginInstall'
+$ git clone git@github.com:k-takata/minpac.git $HOME/.config/nvim/pack/minpac/opt/minpac
+$ vim -c ':PackUpdate'
 ```
-
-run `yarn install --frozen-lockfile` on coc.nvim directory after plugin install
 
 1. For the Ctrl-s to work properly, add this to your .bashrc file
 
@@ -40,7 +35,7 @@ $ echo "stty stop ''" >> ~/.bashrc
 $ source ~/.bashrc
 ```
 
-1. Install required fonts (optional, only when using X display such as gVim)
+1. Install fonts (optional, only when using X display such as gVim)
 
 ```bash
 $ sudo apt-get install ttf-inconsolata

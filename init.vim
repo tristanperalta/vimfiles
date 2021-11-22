@@ -2,6 +2,7 @@ packadd minpac
 call minpac#init()
 
 call minpac#add('k-takata/minpac', {'type': 'opt'})
+call minpac#add('junegunn/fzf')
 call minpac#add('tpope/vim-unimpaired')
 call minpac#add('neovim/nvim-lspconfig')
 call minpac#add('elixir-editors/vim-elixir')
