@@ -7,6 +7,7 @@ call minpac#add('tpope/vim-unimpaired')
 call minpac#add('neovim/nvim-lspconfig')
 call minpac#add('elixir-editors/vim-elixir')
 call minpac#add('mhinz/vim-mix-format')
+call minpac#add('vim-airline/vim-airline')
 
 command! PackUpdate call minpac#update()
 command! PackClean call minpac#clean()
@@ -57,3 +58,34 @@ nvim_lsp.elixirls.setup {
 EOF
 
 let g:mix_format_on_save = 1
+
+nnoremap / /\v
+vnoremap / /\v
+
+nnoremap <leader><space> :nohl<CR>
+
+" tab settings
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set smarttab
+set expandtab
+
+set number
+set history=1000
+
+" invisible characters
+set listchars=tab:▸\ ,eol:¬,trail:·,extends:#,nbsp:·
+setlocal list
+
+" deletes trailing whitespaces
+autocmd BufWritePre * %s/\s\+$//e
+
+" buffers
+noremap <C-Tab> :bnext<CR>
+noremap <C-S-Tab> :bprev<CR>
+noremap <C-n> :bnext<CR>
+noremap <C-p> :bprev<CR>
+noremap <leader>d <Esc>:bdel<CR>
+
+map <C-s> :w<CR>
