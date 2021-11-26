@@ -26,6 +26,7 @@ $ [ -d ${HOME} ] || mkdir -p ${HOME}/.config/nvim
 ```bash
 $ git clone git@github.com:k-takata/minpac.git $HOME/.config/nvim/pack/minpac/opt/minpac
 $ vim -c ':PackUpdate'
+
 ```
 
 4. For the Ctrl-s to work properly, add this to your .bashrc file
