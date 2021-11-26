@@ -44,6 +44,11 @@ $ sudo fc-cache -fv # update font-cache
 
 ## Notes
 
+Add this line to `.bashrc` or `.bash.local` script
+```sh
+export FZF_DEFAULT_COMMAND='rg --files'
+```
+
 To fix the redraw problem on Ubuntu, go to Compiz Setup Manager &rarr; Workarounds &rarr; (check) "Force full screen redraw (buffer swap) on repaint"
 
 # Basic Usage
