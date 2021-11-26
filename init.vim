@@ -4,10 +4,12 @@ call minpac#init()
 call minpac#add('k-takata/minpac', {'type': 'opt'})
 call minpac#add('junegunn/fzf')
 call minpac#add('tpope/vim-unimpaired')
+call minpac#add('tpope/vim-surround')
 call minpac#add('neovim/nvim-lspconfig')
 call minpac#add('elixir-editors/vim-elixir')
 call minpac#add('mhinz/vim-mix-format')
 call minpac#add('vim-airline/vim-airline')
+call minpac#add('mileszs/ack.vim')
 
 command! PackUpdate call minpac#update()
 command! PackClean call minpac#clean()
@@ -89,3 +91,13 @@ noremap <C-p> :bprev<CR>
 noremap <leader>d <Esc>:bdel<CR>
 
 map <C-s> :w<CR>
+
+" ack.vim --- {{{
+let g:ackprg = 'rg --vimgrep --type-not sql --smart-case'
+
+nnoremap <leader>a :Ack<Space>
+" }}}
+
+nnoremap <silent> <C-[> :cprevious<CR>
+nnoremap <silent> <C-]> :cnext<CR>
+
