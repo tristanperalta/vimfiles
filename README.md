@@ -15,41 +15,44 @@ Set of plugins and vim configuration. Uses [vundle](https://github.com/gmarik/vu
 $ git clone git@github.com:tristanperalta/vimfiles.git
 ```
 
-1. Remove existing `.vim` directory and `.vimrc` file and create symlinks
+2. Remove existing `.vim` directory and `.vimrc` file and create symlinks
 
 ```bash
-$ [ -d ${HOME} ] || mkdir -p ${HOME}/.config/
-$ cd .config/ && ln -s ~/vimfiles nvim
-$ cd .config/nvim && ln -s ~/vimfiles/.vimrc init.vim
+$ [ -d ${HOME} ] || mkdir -p ${HOME}/.config/nvim
 ```
 
-1. Install vim-plug
+3. Install minpac
 
 ```bash
-$ cd $HOME/vimfiles/
-$ curl -fLo autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-$ vim -c ':PluginInstall'
+$ git clone git@github.com:k-takata/minpac.git $HOME/.config/nvim/pack/minpac/opt/minpac
+$ vim -c ':PackUpdate'
+
 ```
 
-run `yarn install --frozen-lockfile` on coc.nvim directory after plugin install
-
-1. For the Ctrl-s to work properly, add this to your .bashrc file
+4. For the Ctrl-s to work properly, add this to your .bashrc file
 
 ```bash
 $ echo "stty stop ''" >> ~/.bashrc
 $ source ~/.bashrc
 ```
 
-1. Install required fonts (optional, only when using X display such as gVim)
+5. Install fonts (optional, only when using X display such as gVim)
 
 ```bash
 $ sudo apt-get install ttf-inconsolata
 $ sudo fc-cache -fv # update font-cache
 ```
 
-## Notes
+6. Add this line to `.bashrc` or `.bash.local` script
+```sh
+export FZF_DEFAULT_COMMAND='rg --files'
+```
+7. Install `rg`
+```sh
+sudo apt install rg
+```
 
+## Notes
 To fix the redraw problem on Ubuntu, go to Compiz Setup Manager &rarr; Workarounds &rarr; (check) "Force full screen redraw (buffer swap) on repaint"
 
 # Basic Usage
