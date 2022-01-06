@@ -47,9 +47,9 @@ $ sudo fc-cache -fv # update font-cache
 ```sh
 export FZF_DEFAULT_COMMAND='rg --files'
 ```
-7. Install `rg`
+7. Install `ripgrep`
 ```sh
-sudo apt install rg
+sudo apt install ripgrep
 ```
 
 ## Notes
