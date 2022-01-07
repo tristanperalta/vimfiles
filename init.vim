@@ -10,6 +10,7 @@ call minpac#add('elixir-editors/vim-elixir')
 call minpac#add('mhinz/vim-mix-format')
 call minpac#add('vim-airline/vim-airline')
 call minpac#add('mileszs/ack.vim')
+call minpac#add('preservim/nerdtree')
 
 command! PackUpdate call minpac#update()
 command! PackClean call minpac#clean()
@@ -91,6 +92,8 @@ noremap <C-p> :bprev<CR>
 noremap <leader>d <Esc>:bdel<CR>
 
 map <C-s> :w<CR>
+
+nnoremap <leader>t :NERDTreeToggle<CR>
 
 " ack.vim --- {{{
 let g:ackprg = 'rg --vimgrep --type-not sql --smart-case'
