@@ -11,6 +11,8 @@ call minpac#add('mhinz/vim-mix-format')
 call minpac#add('vim-airline/vim-airline')
 call minpac#add('mileszs/ack.vim')
 call minpac#add('preservim/nerdtree')
+call minpac#add('christoomey/vim-tmux-navigator')
+call minpac#add('windwp/nvim-autopairs')
 
 command! PackUpdate call minpac#update()
 command! PackClean call minpac#clean()
@@ -19,6 +21,7 @@ let mapleader = "-"
 nnoremap <leader>o :<C-u>FZF<CR>
 
 lua << EOF
+require('nvim-autopairs').setup{}
 local nvim_lsp = require('lspconfig')
 
 local on_attach = function(client, bufnr)
@@ -56,7 +59,7 @@ end
 
 nvim_lsp.elixirls.setup {
   on_attach = on_attach,
-  cmd = { "/home/tristan/elixirls/language_server.sh" }
+  cmd = { "/home/tristan/sources/elixir-ls/rel/language_server.sh" }
 }
 EOF
 
@@ -76,6 +79,9 @@ set expandtab
 
 set number
 set history=1000
+
+set noswapfile
+set mouse=a
 
 " invisible characters
 set listchars=tab:▸\ ,eol:¬,trail:·,extends:#,nbsp:·
